@@ -1,0 +1,131 @@
+body {
+	font: 17px/1.5em Tahoma,arial,sans-serif;
+	margin: 0 0 17px;
+	min-width: 900px;
+}
+
+/* Header elements (Faceplate, new game button) */
+header {
+	background: #CCC;
+    border-bottom: 1px solid #999;
+	height: 75px;
+	width: 100%;
+}
+
+header span {
+	display: inline-block;
+}
+
+#new-game {
+	background: #D14836;
+	border: 1px solid #992A1B;
+	border-radius: 3px;
+	bottom: 5px;
+	box-shadow: 2px 2px 6px #666;
+	color: #FFF;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: bold;
+	left: 40%;
+	padding: 3px 13px;
+	position: relative;
+	text-shadow: 1px 2px 3px #000;
+}
+
+#new-game:active {
+	box-shadow: 1px 1px 5px #333 inset;
+	text-shadow: -1px -1px 3px #000;
+}
+
+#new-game:hover {
+	box-shadow: 2px 2px 2px #3F3F3F;
+}
+
+#title {
+	display: inline-block;
+	margin: 27px 15px;
+	min-width: 250px;
+}
+
+/* Tic-Tac-Toe grid */
+#game {
+	height: 500px;
+	margin: 25px auto 125px;
+	width: 900px;
+}
+
+.grid-3 {
+	cursor: pointer;
+	height: 166px;
+	width 900px;
+}
+
+.grid-3 div {
+	display: inline-block;
+	height: 166px;
+	width: 295px;
+}
+
+.middle, .right {
+	margin-left: -6px;
+}
+
+.middle {
+	border-left: 2px solid #000;
+	border-right: 2px solid #000;
+}
+
+.top, .center {
+	border-bottom: 2px solid #000;
+}
+
+/* Taken cell image manipulation */
+.taken-x, .taken-o {
+	display: block;
+	height: 100px;
+	margin: 33px auto;
+	padding: 0;
+	width: 100px;
+}
+
+.taken-x {
+	background: url('/img/sprites.png') no-repeat -100px;
+}
+
+.taken-o {
+	background: url('/img/sprites.png') no-repeat 0;
+}
+
+/* Active player and current turn markers */
+.player-status {
+  display: inline-block;
+}
+
+.player-status:first-child {
+  margin-right: 60px;
+}
+
+details {
+  border: 1px solid #CCC;
+  width: 300px;
+  margin-top: -1px;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Butterbar */
+#butterbar {
+  background-color: #F9EDBE;
+  border: 1px solid #F0C36D;
+  margin: auto;
+  text-align: center;
+  width: 200px;
+  z-index: 100;
+}
+
+#butterbar > p {
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/css/play.css">
+  <title>Tic-Tac-Toe</title>
+</head>
+<body>
+	<header>
+		<h1 id="title">Tic-Tac-Toe</h1>
+		<span id="new-game">New Game</span>
+	</header>
+    <details open>
+      <summary></summary>
+      <div class="player-status">
+        <p>You are:</p>
+        <div class="{{ player }}" id="player-token"></div>
+      </div>
+      <div class="player-status">
+        <p>Current turn:</p>
+        <div class='{{ current_turn }}' id='current-turn'></div>
+      </div>
+    </details>
+	<section id="game">
+		<div class="grid-3">
+			<div class="top left">
+				<span id="tl" class="{{ board[0][0].state }}"></span>
+			</div>
+			<div class="top middle">
+				<span id="tm" class="{{ board[1][0].state }}"></span>
+			</div>
+			<div class="top right">
+				<span id="tr" class="{{ board[2][0].state }}"></span>
+			</div>
+		</div>
+		<div class="grid-3">
+			<div class="center left">
+				<span id="cl" class="{{ board[0][1].state }}"></span>
+			</div>
+			<div class="center middle">
+				<span id="cm" class="{{ board[1][1].state }}"></span>
+			</div>
+			<div class="center right">
+				<span id="cr" class="{{ board[2][1].state }}"></span>
+			</div>
+		</div>
+		<div class="grid-3">
+			<div class="bottom left">
+				<span id="bl" class="{{ board[0][2].state }}"></span>
+			</div>
+			<div class="bottom middle">
+				<span id="bm" class="{{ board[1][2].state }}"></span>
+			</div>
+			<div class="bottom right">
+				<span id="br" class="{{ board[2][2].state }}"></span>
+			</div>
+		</div>
+	</section>
+  <script src="/js/game-compiled.js"></script>
+</body>
+</html>
